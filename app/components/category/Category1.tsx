@@ -161,11 +161,11 @@ const Category1: React.FC = () => {
       >
         {selectedProduct && (
           <div className="w-[100%] max-sm:flex-col max-sm:gap-4 max-h-full flex gap-16">
-            <Card className="w-[40%] max-sm:w-full">
+            <Card className="w-[40%] max-sm:w-full flex items-center justify-center">
               <Image
                 src={selectedProduct.image}
                 alt="men's clothing"
-                className=" w-[400px] h-[350px] mb-4 max-sm:h-44"
+                className=" w-[400px] h-[350px] mb-4 max-sm:h-[300px] max-sm:w-[230px]"
                 height={50}
                 width={200}
               />

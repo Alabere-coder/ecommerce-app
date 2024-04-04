@@ -1,9 +1,9 @@
 import React from "react";
 // import Heading from "../Shared/Heading";
 
-import Img1 from "../../public/blogs/blog-1.jpg";
-import Img2 from "../../public/blogs/blog-2.jpg";
-import Img3 from "../../public/blogs/blog-3.jpg";
+import Img1 from "../../public/blogs/watch1.jpg";
+import Img2 from "../../public/blogs/device1.jpg";
+import Img3 from "../../public/blogs/dress1.jpg";
 import Image from "next/image";
 
 const BlogData = [
@@ -24,7 +24,7 @@ const BlogData = [
     aosDelay: "200",
   },
   {
-    title: "How to choose perfect VR headset",
+    title: "How to choose perfect Lady Outfit",
     subtitle:
       "minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae laudantium. Porro?",
     published: "Jan 20, 2024 by A.I.S.S",

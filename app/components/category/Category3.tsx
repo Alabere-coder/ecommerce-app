@@ -83,7 +83,7 @@ const Category3: React.FC = () => {
       <div className="container py-4 mb-8">
         <div className="flex items-center w-full h-14 text-white bg-orange-500 mb-4 pl-4 rounded-md">
           <h1 className="text-4xl xl:text-4xl font-bold max-md:text-2xl ">
-            Jewelery Collection
+            Jewelry Collection
           </h1>
         </div>
         <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -162,11 +162,11 @@ const Category3: React.FC = () => {
       >
         {selectedProduct && (
           <div className="w-[100%] max-sm:flex-col max-sm:gap-4 max-h-full flex gap-16">
-            <Card className="w-[40%] max-sm:w-full">
+            <Card className="w-[40%] max-sm:w-full flex items-center justify-center">
               <Image
                 src={selectedProduct.image}
                 alt="men's clothing"
-                className=" w-[400px] h-[350px] mb-4 max-sm:h-44"
+                className=" w-[400px] h-[350px] mb-4 max-sm:h-[300px] max-sm:w-[230px]"
                 height={50}
                 width={200}
               />
