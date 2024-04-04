@@ -111,7 +111,7 @@ const Category4: React.FC = () => {
                   <Image
                     src={item.image}
                     alt="men's clothing"
-                    className=" w-full h-32 mb-4"
+                    className=" w-full h-44 mb-4"
                     height={50}
                     width={200}
                   />

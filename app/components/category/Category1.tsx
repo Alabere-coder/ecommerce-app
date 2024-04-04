@@ -104,14 +104,13 @@ const Category1: React.FC = () => {
                     marginBottom: "15px",
                     cursor: "grab",
                   }}
-                  // Open modal when clicking on the card
                   onClick={() => openModal(item)}
                   bordered={false}
                 >
                   <Image
                     src={item.image}
                     alt="men's clothing"
-                    className=" w-full h-32 mb-4"
+                    className=" w-full h-44 mb-4"
                     height={50}
                     width={200}
                   />
