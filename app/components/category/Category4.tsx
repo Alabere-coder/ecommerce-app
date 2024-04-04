@@ -157,48 +157,72 @@ const Category4: React.FC = () => {
         visible={modalVisible}
         onCancel={closeModal}
         footer={null}
-        style={{ width: "90%", height: "90%" }}
+        style={{ width: "96%" }}
+        className="max-h-fit my-4"
       >
         {selectedProduct && (
-          <div className="w-[100%] flex gap-16">
-            <Card className="w-[40%]">
+          <div className="w-[100%] max-sm:flex-col max-sm:gap-4 max-h-full flex gap-16">
+            <Card className="w-[40%] max-sm:w-full">
               <Image
                 src={selectedProduct.image}
                 alt="men's clothing"
-                className=" w-[400px] h-[400px] mb-4"
+                className=" w-[400px] h-[350px] mb-4 max-sm:h-44"
                 height={50}
                 width={200}
               />
             </Card>
-            <div className="w-[60%]">
-              <Title heading={2}>{selectedProduct.title}</Title>
-              {/* <h2 className="text-3xl font-semibold">
-                
-              </h2> */}
-              <Paragraph style={{ fontSize: "18px" }}>
+            <div className="w-[100%] max-sm:wfull">
+              {/* <Title heading={4}>{selectedProduct.title}</Title> */}
+              <h2 className="text-lg font-semibold">{selectedProduct.title}</h2>
+              <Paragraph style={{ fontSize: "14px" }}>
                 {selectedProduct.description}
               </Paragraph>
               <h1 className="text-2xl font-bold">$ {selectedProduct.price}</h1>
 
               {selectedProduct && (
-                <div className="flex items-center gap-4 mt-4">
-                  <p>Quantity:</p>
-                  <div>
-                    <Button
-                      onClick={decreaseCount}
-                      style={{ fontSize: "20px", marginRight: 8 }}
-                      disabled={count === 0}
-                    >
-                      -
-                    </Button>
-                    <span> {count} </span>
-                    <Button
-                      onClick={increaseCount}
-                      style={{ fontSize: "18px", marginLeft: 8 }}
-                    >
-                      +
-                    </Button>
+                <div className="flex items-center justify-between gap-4 mt-4">
+                  <div className="flex items-center gap-4 mt-4">
+                    <p>Quantity:</p>
+                    <div>
+                      <Button
+                        onClick={decreaseCount}
+                        style={{ fontSize: "20px", marginRight: 8 }}
+                        disabled={count === 0}
+                      >
+                        -
+                      </Button>
+                      <span> {count} </span>
+                      <Button
+                        onClick={increaseCount}
+                        style={{ fontSize: "18px", marginLeft: 8 }}
+                      >
+                        +
+                      </Button>
+                    </div>
                   </div>
+                  <button
+                    className={`px-4 py-2 rounded-md ${
+                      addedItems.some(
+                        (addedItem) => addedItem.id === selectedProduct.id
+                      )
+                        ? "bg-red-500 text-white"
+                        : "bg-green-500 text-white"
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent card click event from firing
+                      addedItems.some(
+                        (addedItem) => addedItem.id === selectedProduct.id
+                      )
+                        ? removeItem(selectedProduct)
+                        : addItem(selectedProduct);
+                    }}
+                  >
+                    {addedItems.some(
+                      (addedItem) => addedItem.id === selectedProduct.id
+                    )
+                      ? "REMOVE"
+                      : "ADD"}
+                  </button>
                 </div>
               )}
               <div className="mt-10 w-[60%]">

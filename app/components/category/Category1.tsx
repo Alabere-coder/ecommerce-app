@@ -156,26 +156,24 @@ const Category1: React.FC = () => {
         visible={modalVisible}
         onCancel={closeModal}
         footer={null}
-        style={{ width: "90%" }}
-        className="max-h-screen"
+        style={{ width: "96%" }}
+        className="max-h-fit my-4"
       >
         {selectedProduct && (
-          <div className="w-[100%] max-sm:flex-col max-h-fit flex gap-16">
-            <Card className="w-[40%]">
+          <div className="w-[100%] max-sm:flex-col max-sm:gap-4 max-h-full flex gap-16">
+            <Card className="w-[40%] max-sm:w-full">
               <Image
                 src={selectedProduct.image}
                 alt="men's clothing"
-                className=" w-[400px] h-[350px] mb-4"
+                className=" w-[400px] h-[350px] mb-4 max-sm:h-44"
                 height={50}
                 width={200}
               />
             </Card>
-            <div className="w-[60%]">
-              <Title heading={2}>{selectedProduct.title}</Title>
-              {/* <h2 className="text-3xl font-semibold">
-                
-              </h2> */}
-              <Paragraph style={{ fontSize: "18px" }}>
+            <div className="w-[100%] max-sm:wfull">
+              {/* <Title heading={4}>{selectedProduct.title}</Title> */}
+              <h2 className="text-lg font-semibold">{selectedProduct.title}</h2>
+              <Paragraph style={{ fontSize: "14px" }}>
                 {selectedProduct.description}
               </Paragraph>
               <h1 className="text-2xl font-bold">$ {selectedProduct.price}</h1>
