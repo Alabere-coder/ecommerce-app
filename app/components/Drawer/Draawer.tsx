@@ -17,7 +17,7 @@ function DrawerComponent() {
       </Button>
       <Drawer
         style={{}}
-        width={400}
+        width={"80%"}
         title={<span className=""></span>}
         visible={visible}
         placement="left"
